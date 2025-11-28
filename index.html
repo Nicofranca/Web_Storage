@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Área de Login (aparece se não tiver nome salvo) -->
+        <div id="login-section">
+            <h2>Bem-vindo!</h2>
+            <p>Digite seu nome para salvar:</p>
+            <input type="text" id="usernameInput" placeholder="Seu nome aqui">
+            <br>
+            <button class="btn-save" onclick="salvarNome()">Salvar no Storage</button>
+        </div>
+
+        <!-- Área de Saudação (aparece se tiver nome salvo) -->
+        <div id="greeting-section" class="hidden">
+            <h2 id="greeting-message"></h2>
+            <p>Seu nome está salvo no Local Storage.</p>
+            <button class="btn-clear" onclick="limparDados()">Limpar / Sair</button>
+        </div>
+    </div>
 </body>
 </html>
